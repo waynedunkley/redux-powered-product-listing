@@ -142,7 +142,7 @@ const initialState = {
   ],
 }
 
-export default function productList(state = initialState, action) {
+export default function products(state = initialState, action) {
   switch (action.type) {
     case UPDATE_PRODUCTS_LIST:
       return {

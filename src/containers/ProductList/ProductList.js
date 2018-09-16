@@ -28,8 +28,8 @@ const ProductList = ({ products }) => (
   </StyledDiv>
 )
 
-const mapStateToProps = ({ productList }) => ({
-  products: productList.items,
+const mapStateToProps = ({ products }) => ({
+  products: products.items,
 })
 
 export default connect(mapStateToProps)(ProductList)
