@@ -1,10 +1,15 @@
 import React from "react"
-import { Container } from "components"
+import styled from "styled-components"
+import divStyles from "./Pagination.style"
+
+const StyledDiv = styled.div`
+  ${divStyles};
+`
 
 const Pagination = () => (
-  <Container>
+  <StyledDiv>
     <p>Pagination</p>
-  </Container>
+  </StyledDiv>
 )
 
 export default Pagination
