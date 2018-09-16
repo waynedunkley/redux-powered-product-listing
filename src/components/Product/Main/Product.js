@@ -7,10 +7,14 @@ import {
   ProductDescription,
   ProductPrice,
 } from "components"
-import divStyles from "./Product.style"
+import divStyles, { contentStyles } from "./Product.style"
 
 const StyledDiv = styled.div`
   ${divStyles};
+`
+
+const ProductContent = styled.div`
+  ${contentStyles};
 `
 
 const propTypes = {
@@ -20,9 +24,11 @@ const propTypes = {
 const Product = ({ product }) => (
   <StyledDiv>
     <ProductImage url={product.image.url} alt={product.image.alt} />
-    <ProductTitle text={product.title} />
-    <ProductDescription text={product.description} />
-    <ProductPrice price={product.price} />
+    <ProductContent>
+      <ProductTitle text={product.title} />
+      <ProductDescription text={product.description} />
+      <ProductPrice price={product.price} />
+    </ProductContent>
   </StyledDiv>
 )
 

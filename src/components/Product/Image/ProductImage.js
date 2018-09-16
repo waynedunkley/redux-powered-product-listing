@@ -14,7 +14,7 @@ const propTypes = {
 
 const ProductImage = ({ url, alt }) => (
   <StyledImage>
-    <img src="" alt="" />
+    <img src={url} alt={alt} />
   </StyledImage>
 )
 

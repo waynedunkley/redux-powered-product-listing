@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { connect } from "react-redux"
 import { Product } from "components"
 import divStyles from "./ProductList.style"
 
@@ -7,20 +8,27 @@ const StyledDiv = styled.div`
   ${divStyles};
 `
 
-const ProductList = () => (
+const ProductList = ({ products }) => (
   <StyledDiv>
-    <Product
-      product={{
-        title: "title",
-        description: "description",
-        price: "$59.99",
-        image: {
-          url: "",
-          alt: "alt text",
-        },
-      }}
-    />
+    {products &&
+      products.map(product => (
+        <Product
+          product={{
+            title: product.product_name,
+            description: product.description,
+            price: product.price,
+            image: {
+              url: product.product_image,
+              alt: "alt text",
+            },
+          }}
+        />
+      ))}
   </StyledDiv>
 )
 
-export default ProductList
+const mapStateToProps = ({ productList }) => ({
+  products: productList.items,
+})
+
+export default connect(mapStateToProps)(ProductList)
