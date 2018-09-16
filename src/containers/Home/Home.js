@@ -1,9 +1,10 @@
 import React from "react"
 import { Container } from "components"
+import { Header } from "containers"
 
 const Home = () => (
   <Container>
-    <h1>Homepage</h1>
+    <Header />
   </Container>
 )
 
