@@ -1,13 +1,11 @@
 import { injectGlobal } from "styled-components"
 
 export const colors = {
-  base: "#333333",
-  pink: "#BA77FF",
-  blue: "#8C88FF",
-  green: "#50D2C2",
-  purple: "#6563A4",
-  purpleLight: "#b97cfc",
-  white: "#FFFFFF",
+  dark: "#000000",
+  darkGrey: "#666666",
+  lightGrey: "#999999",
+  backgroundBase: "#F6F6F6",
+  borders: "#E4E4E4",
   light: "#FFFFFF",
 }
 
@@ -58,8 +56,8 @@ injectGlobal`
     line-height: 1.5;
     letter-spacing: 0px;
     font-weight: 400;
-    color: #333;
-    background-color: ${colors.white};
+    color: ${colors.dark};
+    background-color: ${colors.backgroundBase};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     height: 100%;
@@ -72,7 +70,6 @@ injectGlobal`
     font-family: ${fonts.primary};
   }
   a {
-    color: ${colors.blue};
     text-decoration: none;
 
     &:active,
