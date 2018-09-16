@@ -1,10 +1,11 @@
 import React from "react"
 import { Container } from "components"
-import { Header, Pagination } from "containers"
+import { Header, ProductList, Pagination } from "containers"
 
 const Home = () => (
   <Container>
     <Header />
+    <ProductList />
     <Pagination />
   </Container>
 )
