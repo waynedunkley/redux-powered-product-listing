@@ -2,7 +2,7 @@ import React from "react"
 import { Container } from "components"
 import { Header, ProductList, Pagination } from "containers"
 
-const Home = () => (
+const ProductArchive = () => (
   <Container>
     <Header />
     <ProductList />
@@ -10,4 +10,4 @@ const Home = () => (
   </Container>
 )
 
-export default Home
+export default ProductArchive

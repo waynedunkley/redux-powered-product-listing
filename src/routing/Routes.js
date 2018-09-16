@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import ScrollToTop from "./ScrollToTop"
-import { Home } from "containers"
+import { ProductArchive } from "containers"
 
 class Routes extends Component {
   render() {
@@ -9,7 +9,8 @@ class Routes extends Component {
       <BrowserRouter>
         <ScrollToTop>
           <Switch>
-            <Route path="/" component={Home} />
+            <Route path="/" component={ProductArchive} />
+            <Route path="/:page" component={ProductArchive} />
           </Switch>
         </ScrollToTop>
       </BrowserRouter>
