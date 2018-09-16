@@ -5,6 +5,7 @@ const PRODUCTS_REQUEST_SUCCESS = "PRODUCTS_REQUEST_SUCCESS"
 const PRODUCTS_REQUEST_FAILURE = "PRODUCTS_REQUEST_FAILURE"
 const CLEAR_PRODUCT_ITEMS = "CLEAR_PRODUCT_ITEMS"
 const UPDATE_PRODUCT_ITEMS = "UPDATE_PRODUCT_ITEMS"
+const UPDATE_PRODUCT_PER_PAGE = "UPDATE_PRODUCT_PER_PAGE"
 
 const productsRequestSent = () => ({
   type: PRODUCTS_REQUEST_SENT,
@@ -21,6 +22,11 @@ const productsRequestFailure = () => ({
 const updatesProductItems = products => ({
   type: UPDATE_PRODUCT_ITEMS,
   products,
+})
+
+export const updatePerPage = num => ({
+  type: UPDATE_PRODUCT_PER_PAGE,
+  num,
 })
 
 export const handleGetProducts = () => dispatch => {
@@ -70,6 +76,11 @@ export default function products(state = initialState, action) {
       return {
         ...state,
         items: {},
+      }
+    case UPDATE_PRODUCT_PER_PAGE:
+      return {
+        ...state,
+        perPage: action.num,
       }
     default:
       return state

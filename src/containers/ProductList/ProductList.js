@@ -12,7 +12,9 @@ const StyledDiv = styled.div`
 const ProductList = ({ products, perPage, match }) => {
   const { params = {} } = match
   const page = params.page || 1
-  const subSet = products.slice((page - 1) * perPage, page * perPage)
+  const s = (page - 1) * perPage
+  const e = page * perPage
+  const subSet = s < products.length ? products.slice(s, e) : []
   return (
     <StyledDiv>
       {subSet &&
