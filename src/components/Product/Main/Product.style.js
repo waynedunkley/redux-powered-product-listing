@@ -5,8 +5,8 @@ const divStyles = ({ theme: { colors } }) => `
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  flex-basis: calc(20% - 20px);
-  max-width: calc(20% - 20px);
+  flex-basis: calc(25% - 20px);
+  max-width: calc(25% - 20px);
 `
 
 const contentStyles = ({ theme: { colors } }) => `
