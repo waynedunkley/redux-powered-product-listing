@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import divStyles from "./Header.style"
+import divStyles from "./ProductList.style"
 
 const StyledDiv = styled.div`
   ${divStyles};
