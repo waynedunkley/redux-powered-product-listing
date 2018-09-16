@@ -6,6 +6,7 @@ const divStyles = ({ theme: { colors } }) => `
   display: flex;
   flex-direction: column;
   flex-basis: calc(20% - 20px);
+  max-width: calc(20% - 20px);
 `
 
 const contentStyles = ({ theme: { colors } }) => `

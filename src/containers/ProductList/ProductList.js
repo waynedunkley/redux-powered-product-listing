@@ -13,6 +13,7 @@ const ProductList = ({ products }) => (
     {products &&
       products.map(product => (
         <Product
+          key={product.id}
           product={{
             title: product.product_name,
             description: product.description,
