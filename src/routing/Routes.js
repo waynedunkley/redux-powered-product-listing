@@ -9,8 +9,8 @@ class Routes extends Component {
       <BrowserRouter>
         <ScrollToTop>
           <Switch>
-            <Route path="/" component={ProductArchive} />
             <Route path="/:page" component={ProductArchive} />
+            <Route path="/" component={ProductArchive} />
           </Switch>
         </ScrollToTop>
       </BrowserRouter>
