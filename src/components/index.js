@@ -13,3 +13,5 @@ export {
   default as ProductDescription,
 } from "./Product/Description/ProductDescription"
 export { default as ProductPrice } from "./Product/Price/ProductPrice"
+export { default as ProductList } from "./ProductList/ProductList"
+export { default as Pagination } from "./Pagination/Pagination"

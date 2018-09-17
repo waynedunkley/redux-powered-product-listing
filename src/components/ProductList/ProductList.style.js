@@ -1,4 +1,4 @@
-const divStyles = ({ theme: { colors } }) => `
+const divStyles = () => `
 display: flex;
 flex-wrap: wrap;
 `
