@@ -34,7 +34,7 @@ const Pagination = ({ current, totalPages }) => {
               <Link to={`/${link}`}>{link}</Link>
             </li>
           ))}
-        <li className={`last ${current === totalPages && "active"}`}>
+        <li className={`next ${current === totalPages && "active"}`}>
           <Link to={`/${current + 1}`}>{`Next page >`}</Link>
         </li>
       </ul>

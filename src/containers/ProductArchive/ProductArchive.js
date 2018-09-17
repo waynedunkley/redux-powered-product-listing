@@ -19,12 +19,19 @@ class ProductArchive extends Component {
     const { products, perPage, match } = this.props
     const { params = {} } = match
     const currentPage = params.page || 1
+    const subSet = getProductSubset(products, currentPage, perPage)
+
+    // if (products.length > 0 && subSet.length === 0) {
+    //   // if there are products but pagination is too high,
+    //   // go to last possible paginated page
+    //   const lastPage = Math.ceil(products.length / perPage)
+    //   history.push(`/${lastPage}`)
+    // }
+
     return (
       <Container>
         <Header />
-        <ProductList
-          products={getProductSubset(products, currentPage, perPage)}
-        />
+        <ProductList products={subSet} />
         <Pagination
           current={parseInt(currentPage, 0)}
           totalPages={Math.ceil(products.length / perPage)}
