@@ -3,5 +3,6 @@ import { shallow } from "enzyme"
 import Container from "./Container"
 
 it("<Container /> renders", () => {
-  shallow(<Container />)
+  const wrapper = shallow(<Container />)
+  expect(wrapper).toMatchSnapshot()
 })

@@ -5,4 +5,5 @@ import ProductDescription from "./ProductDescription"
 it("ProductDescription renders description", () => {
   const wrapper = shallow(<ProductDescription text="description" />)
   expect(wrapper.contains("description")).toEqual(true)
+  expect(wrapper).toMatchSnapshot()
 })

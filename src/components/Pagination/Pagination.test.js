@@ -12,4 +12,5 @@ it("Pagination renders correctly", () => {
   expect(wrapper.find("li.active").contains(current)).toBeTruthy()
   expect(wrapper.find("li.prev").contains("< Previous page")).toBeTruthy()
   expect(wrapper.find("li.next").contains("Next page >")).toBeTruthy()
+  expect(wrapper).toMatchSnapshot()
 })
